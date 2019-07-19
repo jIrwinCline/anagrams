@@ -28,6 +28,6 @@ describe('#anagrams') do
   end
   it('checkif two non anagrams but non antigrams return a simple not an anagram string') do
     anagram = Anagram.new('simple', 'man')
-    expect(anagram.anagrams?).to(eq("these are not anagrams"))
+    expect(anagram.anagrams?).to(eq("These are not anagrams"))
   end
 end
