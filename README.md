@@ -8,6 +8,17 @@
 
 _a program that takes two strings and determines whether those two string are anagrams of eachother._
 
+## Specs
+
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+|Check if two words are anagrams| 'words' and "sword"| returns true|
+|Account for the possibility that words might have different cases but should still be anagrams.| "Tea" and "Eat"| are both anagrams|
+|Add a rule to check if the inputs are words|"ggg" | lets you know you need an actual word|
+|If phrases aren't anagrams, the method should check whether they are actually "antigrams.| "dead" and "light" |are antigrams|
+|Account for multiple words being anagrams or "antigrams.| two anagram strings with spaces and punctuation differing | is anagram |
+||||
+
 ## Setup/Installation Requirements
 
 * Download files from GitHub
