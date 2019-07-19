@@ -21,4 +21,9 @@ describe('#anagrams') do
 
      expect(anagram.anagrams?).to(eq("these are ANTIgrams"))
   end
+
+  it('two string longer than one word should still return as anagrams if they meet the standard') do
+    anagram = Anagram.new('kayak racecars', 'racecar kayaks')
+    expect(anagram.anagrams?).to(eq("these are anagrams!"))
+  end
 end
