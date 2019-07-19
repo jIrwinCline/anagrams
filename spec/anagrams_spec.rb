@@ -13,13 +13,13 @@ describe('#anagrams') do
   end
   it('if one of the words doesnt contain a vowel, will output a string that asks for real words') do
     anagram = Anagram.new('x', 'y')
-    expect(anagram.anagrams?).to(eq("please enter real words"))
+    expect(anagram.anagrams?).to(eq(false))
   end
 
   it('if two strings entered are not anagrams, and have NO matching letters otput a string that lets them know they are antigrams') do
     anagram = Anagram.new('tack', 'shoe')
-     # STDOUT.should_receive(:p).with("these are ANTIgrams")
-     output("these are ANTIgrams").to_stdout
-     expect(anagram.anagrams?).to(eq(false))
+     STDOUT.should_receive(:p).with("these are ANTIgrams")
+     # output("these are ANTIgrams").to_stdout
+     # expect(anagram.anagrams?).to(eq(false))
   end
 end
