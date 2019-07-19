@@ -18,27 +18,22 @@ class Anagram
       end
       if count == 0
         p "these are ANTIgrams"
-        false
       else
         if @arr1 == @arr2
           p "these are anagrams!"
-          true
         else
           p "These are not anagrams"
-          false
         end
       end
     else
       p "please enter real words"
-      true
-
     end
   end
 end
 
-p "please give us your strings"
-str1 = gets.chomp
-p "and"
-str2 = gets.chomp
-strings = Anagram.new(str1,str2)
-strings.anagrams?
+# p "please give us your strings"
+# str1 = gets.chomp
+# p "and"
+# str2 = gets.chomp
+# strings = Anagram.new(str1,str2)
+# strings.anagrams?
