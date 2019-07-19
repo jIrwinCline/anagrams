@@ -1,7 +1,7 @@
 require 'pry'
-require 'war1.rb'
+require 'anagrams.rb'
 
-describe('war1') do
+describe('#anagrams') do
   it('this is your generic test') do
 
   end
