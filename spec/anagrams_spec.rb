@@ -7,4 +7,8 @@ describe('#anagrams') do
     anagram = Anagram.new('dot', 'tod')
      expect(anagram.anagrams?).to(eq(true))
   end
+  it('if two strings entered are anagrams, but have different capital letters, they should still return true') do
+    anagram = Anagram.new('God', 'dog')
+     expect(anagram.anagrams?).to(eq(true))
+  end
 end
