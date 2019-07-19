@@ -1,4 +1,5 @@
 require 'pry'
+require 'rspec'
 require 'anagrams.rb'
 
 describe('#anagrams') do

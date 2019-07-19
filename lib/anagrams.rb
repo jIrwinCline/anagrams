@@ -17,9 +17,3 @@ class Anagram
     end
   end
 end
-
-p "please give us your strings"
-str1 = gets.chomp
-p "and"
-str2 = gets.chomp
-strings = Anagram.new(str1,str2)
