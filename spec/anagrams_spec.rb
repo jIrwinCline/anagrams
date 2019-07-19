@@ -26,4 +26,8 @@ describe('#anagrams') do
     anagram = Anagram.new('kayak racecars', 'racecar kayaks')
     expect(anagram.anagrams?).to(eq("these are anagrams!"))
   end
+  it('checkif two non anagrams but non antigrams return a simple not an anagram string') do
+    anagram = Anagram.new('simple', 'man')
+    expect(anagram.anagrams?).to(eq("these are not anagrams"))
+  end
 end
