@@ -8,30 +8,30 @@ class Anagram
     p @arr1
     p @arr2
   end
-  count = 0
-      def anagrams?
-        if @arr1.any?{|x| ["a","e","i","o","u"].include?(x)}|| @arr2.any?{ |y| ["a","e","i","o","u"].include?(y)}
-        @arr2.each do |i|
-          if @arr1.include?(i)
-            count += 1
-          end
+  def anagrams?
+    count = 0
+    if @arr1.any?{|x| ["a","e","i","o","u"].include?(x)}|| @arr2.any?{ |y| ["a","e","i","o","u"].include?(y)}
+      @arr2.each do |i|
+        if @arr1.include?(i)
+          count += 1
         end
-        if count == 0
-          p "these are ANTIgrams"
-          false
+      end
+      if count == 0
+        p "these are ANTIgrams"
+        false
+      else
+        if @arr1 == @arr2
+          p "these are anagrams!"
+          true
         else
-          if @arr1 == @arr2
-            p "these are anagrams!"
-            true
-          else
-            p "These are not anagrams"
-            false
-          end
+          p "These are not anagrams"
+          false
         end
       end
     else
-        p "please enter real words"
-        true
+      p "please enter real words"
+      true
+
     end
   end
 end
