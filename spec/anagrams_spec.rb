@@ -15,13 +15,10 @@ describe('#anagrams') do
     anagram = Anagram.new('x', 'y')
     expect(anagram.anagrams?).to(eq("please enter real words"))
   end
-
   it('if two strings entered are not anagrams, and have NO matching letters otput a string that lets them know they are antigrams') do
     anagram = Anagram.new('tack', 'shoe')
-
      expect(anagram.anagrams?).to(eq("these are ANTIgrams"))
   end
-
   it('two string longer than one word should still return as anagrams if they meet the standard') do
     anagram = Anagram.new('kayak racecars', 'racecar kayaks')
     expect(anagram.anagrams?).to(eq("these are anagrams!"))
