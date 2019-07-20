@@ -23,8 +23,12 @@ describe('#anagrams') do
     anagram = Anagram.new('kayak racecars', 'racecar kayaks')
     expect(anagram.anagrams?).to(eq("these are anagrams!"))
   end
-  it('checkif two non anagrams but non antigrams return a simple not an anagram string') do
+  it('check if two non anagrams but non antigrams return a simple not an anagram string') do
     anagram = Anagram.new('simple', 'man')
     expect(anagram.anagrams?).to(eq("These are not anagrams"))
+  end
+  it('check if the two inputted strings contain any palindromes within them and return them to user') do
+    anagram = Anagram.new('kayak racecar', 'racecar kayak')
+    expect(anagram.is_palindrome?).to(eq(4))
   end
 end
